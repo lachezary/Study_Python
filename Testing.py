@@ -9,4 +9,4 @@ for digit in count:
     print(list.index(digit))
 
 
-print
+print(count)
