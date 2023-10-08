@@ -1,0 +1,18 @@
+first_time = int(input())
+second_time = int(input())
+third_time = int(input())
+
+sum = first_time + second_time + third_time
+seconds = 0
+minutes = 0
+
+if sum > 59:
+    minutes = sum // 60
+    seconds = sum % 60
+else:
+    seconds = sum
+
+if seconds < 10:
+    print(f"{str(minutes)}:0{str(seconds)}")
+else:
+    print(f"{str(minutes)}:{str(seconds)}")

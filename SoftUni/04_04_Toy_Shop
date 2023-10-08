@@ -1,0 +1,31 @@
+holiday_cost = float(input())
+puzzle_pcs = int(input())
+dolls_pcs = int(input())
+bears_pcs = int(input())
+minion_pcs = int(input())
+trucks_pcs = int(input())
+
+
+puzzle_price = 2.6
+dolls_price = 3
+bears_price = 4.1
+minion_price = 8.2
+trucks_price = 2
+
+all_pcs = puzzle_pcs + dolls_pcs + bears_pcs + minion_pcs + trucks_pcs
+profit = (puzzle_pcs*puzzle_price)+(dolls_pcs*dolls_price)+(bears_pcs*bears_price)+(minion_pcs*minion_price)+(trucks_pcs*trucks_price)
+discount = 0.25
+
+if all_pcs >= 50:
+    profit = profit - (profit * discount)
+
+rent = profit * 0.1
+profit = profit - rent
+
+if profit >= holiday_cost:
+    change = profit - holiday_cost
+    print(f"Yes! {change:.2f} lv left.")
+else:
+    change = holiday_cost - profit
+    print(f"Not enough money! {change:.2f} lv needed.")
+    
