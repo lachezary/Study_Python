@@ -1,0 +1,22 @@
+budget = float(input())
+people = int(input())
+costumes = float(input())
+
+decorum = budget * 0.1
+
+if people > 150:
+    costumes = costumes - (costumes * 0.1)
+    costumes_cost = costumes * people
+else:
+    costumes_cost = costumes * people
+
+movie_cost = costumes_cost + decorum
+change = budget - movie_cost
+not_enough_money = movie_cost - budget
+
+if movie_cost > budget:
+    print("Not enough money!")
+    print(f"Wingard needs {not_enough_money:.2f} leva more.")
+else:
+    print("Action!")
+    print(f"Wingard starts filming with {change:.2f} leva left.")
