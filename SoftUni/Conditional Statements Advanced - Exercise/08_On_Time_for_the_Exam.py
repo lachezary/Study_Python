@@ -30,8 +30,12 @@ elif (exam_time - arrival_time <= 30):
     print("Early")
     print(f"{difference_minutes} minutes before the start")
 elif (exam_time - arrival_time >= 30):
-    print("Early")
-    print(f"{difference_hours}:{difference_minutes:02} hours before the start")
+    if difference_hours == 0:
+        print("Early")
+        print(f"{difference_minutes} minutes before the start")
+    else:
+        print("Early")
+        print(f"{difference_hours}:{difference_minutes:02} hours before the start")
 
 
 
