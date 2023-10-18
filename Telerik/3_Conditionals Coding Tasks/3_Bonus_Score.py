@@ -10,3 +10,17 @@
 # Output the score with the applied bonus
 # Constraints
 # The score will always be a valid integer number
+
+score = int(input())
+
+if score == 0 or score > 9:
+    print("invalid score")
+elif score <= 3:
+    score = score * 10
+    print(score)
+elif score <= 6:
+    score = score * 100
+    print(score)
+elif score <= 9:
+    score = score * 1000
+    print(score)
