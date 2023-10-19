@@ -11,3 +11,28 @@
 # print the english word for the digits. Otherwise, print "not a digit".
 # Constraints
 # The input will never be an empty line.
+
+digit_input = input()
+
+if digit_input == "0":
+    print("zero")
+elif digit_input == "1":
+    print("one")
+elif digit_input == "2":
+    print("two")
+elif digit_input == "3":
+    print("three")
+elif digit_input == "4":
+    print("four")
+elif digit_input == "5":
+    print("five")
+elif digit_input == "6":
+    print("six")
+elif digit_input == "7":
+    print("seven")
+elif digit_input == "8":
+    print("eight")
+elif digit_input == "9":
+    print("nine")
+else:
+    print("not a digit")
