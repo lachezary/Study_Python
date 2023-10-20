@@ -17,3 +17,13 @@ try:
         print("invalid time")
 except ValueError:
     print("invalid time")
+
+
+
+    if (am_pm == "PM" and ((hours >= 1 and minutes >= 0) and (hours <= 11 and minutes <= 59))) or \
+       (am_pm == "AM" and ((hours == 12) or (hours >= 0 and hours <= 2 and minutes >= 0 and minutes <= 59))):
+        print("beer time")
+    else:
+        print("non-beer time")
+except ValueError:
+    print("invalid time")
