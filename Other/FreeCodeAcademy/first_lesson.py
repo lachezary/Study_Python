@@ -37,7 +37,35 @@
 # print(f"{plural_noun} are blue")
 # print(f"I love {celebrity}")
 
-friends = ["Kevin", "Karen", "Jim"]
-friends1 = ["Kevin", 1, False]
+# friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby"]
+# friends1 = ["Kevin", 1, False]
 
-print(friends)
+# # print(friends[-1])
+# friends[0] = "Mike"
+# print(friends[0])
+
+# lucky_numbers = [4, 8, 15, 16, 23, 42]
+# friends = ["Kevin", "Karen", "Jim", "Jim", "Jim", "Oscar", "Toby"]
+# # friends.extend(lucky_numbers)
+# # friends.append("Creed")
+# # friends.insert(1, "Kelly")
+# # friends.remove("Jim")
+# # friends.clear()
+# # friends.pop()
+# # print(friends.count("Jim"))
+
+# # print(friends.index("Jim"))
+# # friends.sort()
+# # lucky_numbers.sort()
+# # lucky_numbers.reverse()
+# # print(friends.index("Jim"))
+# # print(friends)
+# friends2 = friends.copy()
+# print(friends2)
+
+
+name = input()
+
+
+print(name[1])
+
