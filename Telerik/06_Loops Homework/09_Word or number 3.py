@@ -21,11 +21,13 @@ for i in range (input_lines):
         if word_count > 0:
             print(words_sum)
             words_sum = ""
+            word_count = 0
     elif not(new_input[-1].isdigit()):
-            if num_count > 0:
-                print(nums_sum)
-                nums_sum = 0
-    
+        if num_count > 0:
+            print(nums_sum)
+            nums_sum = 0
+            num_count = 0
+            
     if new_input[-1].isdigit():
         new_input = int(new_input)
         nums_sum += new_input
@@ -37,3 +39,8 @@ for i in range (input_lines):
         else:
             words_sum = words_sum + "-" + new_input
             word_count += 1
+
+if num_count == 0:
+    print(words_sum)
+elif word_count == 0:
+    print(nums_sum)
