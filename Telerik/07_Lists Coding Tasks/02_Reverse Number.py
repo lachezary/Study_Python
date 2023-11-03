@@ -6,13 +6,21 @@
 # Output
 # Print the given number with reversed digits
 
+# normal_num = input()
+# reversed_num = ""
+
+# for char in normal_num:
+#     reversed_num = str(char) + reversed_num
+    
+    
+# print(reversed_num)
+    
+
+
 normal_num = input()
-reversed_num = ""
+work_list = list(normal_num)
+work_list.reverse()
 
-for char in normal_num:
-    reversed_num = str(char) + reversed_num
-    
-    
+reversed_num = "".join(work_list)
+
 print(reversed_num)
-    
-
