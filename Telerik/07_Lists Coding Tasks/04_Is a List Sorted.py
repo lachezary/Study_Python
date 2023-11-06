@@ -12,11 +12,16 @@
 # print 'true' if sorted or 'false' otherwise.
 
 input_lines = int(input())
+line_correct = True
 
-for i in range(input_lines):
+for lines in range(input_lines):
     new_line = input().split(",")
-    for element_line 
-    if new_line[i] <= new_line[i+1]: 
-    print(new_line)
-    
-    
+    for i in range (len(new_line)):
+        if new_line[i] > new_line[i+1]:
+            line_correct = False
+            break
+
+if line_correct:
+    print("All lines are correctly formatted.")
+else:
+    print("Not all lines are correctly formatted.")
