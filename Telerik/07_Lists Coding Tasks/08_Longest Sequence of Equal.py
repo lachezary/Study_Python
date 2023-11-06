@@ -11,19 +11,25 @@
 
 
 input_lines = int(input())
-old_num = 0
-num = 0
-counter = 0
-old_counter = 0
 
-for i in range(input_lines):
+max_length = 1
+current_length = 1
+
+input_elements = []
+
+for i in range (input_lines):
     num = int(input())
-    if counter == 0 and old_counter == 0:
-        old_num = num
-    elif num == old_num:
-        counter += 1
-    elif num != old_num:
-        old_counter = counter
-        old_num = num
-        counter = 0
+    input_elements.append(num)
+    
+for i in range(1 , input_lines):
+    if input_elements[i] == input_elements [i - 1]:
+        current_length += 1
+    else:
+        if current_length > max_length:
+            max_length = current_length
+        current_length = 1
 
+if current_length > max_length:
+    max_length = current_length
+    
+print(max_length)
