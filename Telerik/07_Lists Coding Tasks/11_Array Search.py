@@ -16,13 +16,16 @@
 # N will always be in the range of [5, 1000]
 
 input_line = input().split(",")
+sorted_line = list(map(int, input_line))
+sorted_line.sort()
+start_char = sorted_line[0]
+length = len(sorted_line)
 result = []
-length = len(input_line)
 
-for i in range(length):
-    if int(input_line[i]) not in input_line:
+for i in range(start_char, start_char + length):
+    if i not in sorted_line:
         result.append(i)
-    else:
-        continue
-        
-print(result)
+
+print(",".join(map(str, result)))
+
+
