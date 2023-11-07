@@ -22,7 +22,7 @@ start_char = sorted_line[0]
 length = len(sorted_line)
 result = []
 
-for i in range(start_char, start_char + length):
+for i in range(1, length+1):
     if i not in sorted_line:
         result.append(i)
 
