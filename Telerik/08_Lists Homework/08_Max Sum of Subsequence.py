@@ -12,6 +12,8 @@ max_sum = -9999
 for i in range (line_input):
     char = int(input())
     num_line.append(char)
+    if last_sum < 0:
+        last_sum = 0
     if i == 0:
         current_sum = char
     elif i != 0:
