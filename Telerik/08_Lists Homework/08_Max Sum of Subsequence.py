@@ -1,12 +1,23 @@
-# Max Sum of Subsequence
-# Write a program that finds the maximal sum of 
-# consecutive elements in a given array of N numbers.
+# # Output
+# # Print the maximal sum of consecutive numbers
 
-# Can you do it with only one loop 
-# (with a single scan through the elements of the array)?
-# Input
-# On the first line, you will receive the number N
-# On the next N lines, the numbers of the array 
-# will be given
-# Output
-# Print the maximal sum of consecutive numbers
+
+line_input = int(input())
+num_line = []
+current_sum = -9999
+last_sum = -9999
+max_sum = -9999
+
+
+for i in range (line_input):
+    char = int(input())
+    num_line.append(char)
+    if i == 0:
+        current_sum = char
+    elif i != 0:
+        current_sum = last_sum + char
+        if current_sum > max_sum:
+            max_sum = current_sum
+    last_sum = current_sum
+print(max_sum)
+
