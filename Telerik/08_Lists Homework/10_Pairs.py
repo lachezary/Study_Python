@@ -13,14 +13,11 @@ line_input = input().split(" ")
 int_line = list(map(int, line_input))
 counter = 0
 
-for start_of_pair in int_line:
-    for end_of_pair in int_line:
-        if start_of_pair + end_of_pair == target_sum:
-            print(f"{start_of_pair},{end_of_pair}")
+for i in range(len(int_line)):
+    for j in range(i + 1, len(int_line)):
+        if int_line[i] + int_line[j] == target_sum:
+            print(f"{int_line[i]},{int_line[j]}")
             counter += 1
-            int_line.pop(start_of_pair)
-            int_line.pop(end_of_pair)
 
 if counter == 0:
     print("no pairs")
-    
